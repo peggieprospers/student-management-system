@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Student Management System</h1>
+    </header>
+
+    <!-- Add / Edit form -->
+    <section class="card">
+      <h2 id="form-title">Add Student</h2>
+      <form id="student-form">
+        <input type="hidden" id="student-id" />
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter name" />
+
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter email" />
+
+        <label for="age">Age</label>
+        <input type="text" id="age" placeholder="Enter age" />
+
+        <label for="course">Course</label>
+        <select id="course">
+          <option value="">Select a course</option>
+          <option value="React">React</option>
+          <option value="Node.js">Node.js</option>
+          <option value="Python">Python</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Next.js">Next.js</option>
+        </select>
+
+        <div class="form-buttons">
+          <button type="submit" id="submit-btn">Add Student</button>
+          <button type="button" id="cancel-btn" class="hidden">Cancel</button>
+        </div>
+
+        <p id="message"></p>
+      </form>
+    </section>
+
+    <!-- Search and filter -->
+    <section class="card">
+      <h2>Students</h2>
+      <div class="toolbar">
+        <input type="text" id="search-input" placeholder="Search students..." />
+        <select id="filter-course">
+          <option value="">All Courses</option>
+          <option value="React">React</option>
+          <option value="Node.js">Node.js</option>
+          <option value="Python">Python</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Next.js">Next.js</option>
+        </select>
+      </div>
+
+      <!-- Student table -->
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Course</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="student-table-body">
+            <!-- JavaScript will fill this in -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
